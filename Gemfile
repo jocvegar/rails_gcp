@@ -56,3 +56,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "google-cloud-bigquery", "~> 1.35"
+
+gem "httparty", "~> 0.19.0"

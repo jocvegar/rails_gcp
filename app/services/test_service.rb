@@ -8,13 +8,15 @@ class TestService < ApplicationService
 
   def call
     bigquery = Google::Cloud::Bigquery.new
-     sql = "SELECT * FROM `bigquery-learn-test.teset_dataset.top_10_tech`" \
-           "LIMIT 100"
+    sql = "SELECT * FROM `bigquery-learn-test.teset_dataset.top_10_tech`" \
+    "LIMIT 100"
 
-     results = bigquery.query(sql)
+    results = bigquery.query(sql)
 
-     results.each do |row|
-       puts row.inspect
-     end
+    results.each do |row|
+      puts "HOLA"
+      puts row
+      puts "HOLA"
+    end
   end
 end
