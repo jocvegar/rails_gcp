@@ -1,5 +1,6 @@
 class TestService < ApplicationService
   require "google/cloud/bigquery"
+
   ENV["GOOGLE_APPLICATION_CREDENTIALS"] = "bigquery-learn-test-860b6e369f13.json"
 
   def initialize(name="")
@@ -8,6 +9,7 @@ class TestService < ApplicationService
 
   def call
     bigquery = Google::Cloud::Bigquery.new
+
     sql = "SELECT * FROM `bigquery-learn-test.teset_dataset.top_10_tech`" \
     "LIMIT 100"
 
